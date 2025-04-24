@@ -1,23 +1,59 @@
-# EduToken Rewards System for Students
+#!/bin/bash
 
-## 📚 Project Description
-EduToken is a blockchain-based rewards system designed to incentivize and recognize the academic efforts of students. By issuing tokens for achievements such as assignment completion, good grades, or participation, educators can foster a more engaging learning environment.
+# Variables
+REPO_NAME="0xdA228b6353A7448386481D1afb4Bc43C8a5a4fFf"
+GITHUB_URL="https://github.com/RahulDubey0088/$REPO_NAME.git"
 
-## 🌟 Project Vision
-Our vision is to create a decentralized and transparent reward mechanism that motivates students, promotes educational excellence, and potentially connects academic performance to real-world benefits.
+# Create README.md with initial content
+echo "# $REPO_NAME" > README.md
 
-## 🔑 Key Features
-- **Reward Distribution**: Admins (educators) can issue EduTokens to students for completing specific academic tasks.
-- **Token Burn**: Students can burn their tokens, simulating token usage or redemption for rewards.
-- **Minimalist Design**: Simple, gas-efficient contract with just two main functions: reward issuance and token burning.
+# Optionally add license
+echo -e "\nAdding MIT License..."
+cat <<EOL > LICENSE
+MIT License
 
-## 🔮 Future Scope
-- Integration with a frontend platform for real-time token tracking.
-- Redeemable reward marketplace (vouchers, learning materials, etc.).
-- Role-based access controls for multiple educators.
-- Enhanced student dashboards using Web3.
-- NFT badges for major milestones.
+Copyright (c) $(date +%Y)
 
-contract address 0xdA228b6353A7448386481D1afb4Bc43C8a5a4fFf
+Permission is hereby granted, free of charge, to any person obtaining a copy...
+(license body continues)
+EOL
 
-![image](https://github.com/user-attachments/assets/e51afafd-b4f0-4de3-b145-a4bb42589f52)
+# Optionally create .gitignore for common languages (here: Python)
+echo -e "\nCreating .gitignore..."
+cat <<EOL > .gitignore
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+EOL
+
+# Git initialization and first commit
+echo -e "\nInitializing Git repo..."
+git init
+git add README.md LICENSE .gitignore
+git commit -m "Initial commit with README, License, and .gitignore"
+
+# Set main branch and connect remote
+git branch -M main
+git remote add origin $GITHUB_URL
+
+# Push to GitHub
+git push -u origin main
+
+# Optionally create and activate virtual environment (for Python)
+if command -v python3 &> /dev/null; then
+    echo -e "\nSetting up virtual environment..."
+    python3 -m venv venv
+    echo "Virtual environment 'venv' created. Activate with 'source venv/bin/activate'"
+fi
+
+echo -e "\nProject setup complete!"
