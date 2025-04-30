@@ -53,3 +53,6 @@ Design mockups and screenshots of the proposed DApp frontend will be added here.
 ---
 
 Let me know if you'd like to generate a frontend DApp, test script, or deployment guide for this project!
+
+![WhatsApp Image 2025-04-30 at 11 10 50_fe29806c](https://github.com/user-attachments/assets/b0e71d39-bd66-4fdf-b539-1c1d42aba6c1)
+
